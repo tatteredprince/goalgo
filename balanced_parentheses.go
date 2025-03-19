@@ -19,20 +19,20 @@ func main() {
 
 	parentheses := []byte(input)
 
-	openParenthesCount := 0
+	openParenthesesCount := 0
 
 	for _, s := range parentheses {
 		if s == '(' {
-			openParenthesCount++
-		} else if openParenthesCount != 0 && s == ')' {
-			openParenthesCount--
+			openParenthesesCount++
+		} else if openParenthesesCount != 0 && s == ')' {
+			openParenthesesCount--
 		} else {
 			fmt.Println(0)
 			os.Exit(0)
 		}
 	}
 
-	if openParenthesCount == 0 {
+	if openParenthesesCount == 0 {
 		fmt.Println(1)
 	} else {
 		fmt.Println(0)
